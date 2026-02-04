@@ -4,9 +4,9 @@
 }
 
 body {
-  background-color: aliceblue;
+  background-color: rgb(255, 242, 251);
   text-align: center;
-  color: navy;
+  color: rgb(90, 90, 215);
   margin: auto;
   font-family: water;
 }
@@ -16,7 +16,7 @@ h1{
 }
 
 #myCanvas {
-  background-image: url("https://i.pinimg.com/originals/f8/13/5b/f8135b9ebf6eceb9fb003da7dd2d6266.gif");
+  background-image: url("https://i.pinimg.com/originals/a8/30/02/a83002da3a3bdceac3f3226a4f1d1bdf.gif");
   background-size: 600px 400px;
   border-radius: 300px;
   border: 5px solid white;
