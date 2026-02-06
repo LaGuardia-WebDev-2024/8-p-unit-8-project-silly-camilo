@@ -2,39 +2,77 @@
 setup = function() {
     size(600, 400);
     background(255,255,255,0);
-    
-    drawFish(200, 200, color(200,0,200)); 
-    drawFish(300, 200, color(0,200,200));
 };
+
+    var pop1X = random(500);
+    var pop1Y = random(300);
+    var pop2X = random(500);
+    var pop2Y = random(300);
+    var pop3X = random(500);
+    var pop3Y = random(300);
+
+    var aisu1X = random(500);
+    var aisu1X = random(300);
+    var aisu2X = random(500);
+    var aisu2X = random(300);
+    var aisu3X = random(500);
+    var aisu3X = random(300);
 
 //🟢draw Function - will run on repeat
 draw = function(){
   noStroke();
 
   background(255, 255, 255, 0);
-  drawKAITO(mouseX, mouseY);
 
+  drawKAITO(mouseX, mouseY);
+  
+  drawPopsicle(pop1X, pop1Y);
+  drawPopsicle(pop2X, pop2Y);
+  drawPopsicle(pop3X, pop3Y);
 };
 
 //🟢mouseClicked Function - will run when mouse is clicked
 mouseClicked = function(){
 
+  pop1X = random(500); //get rid of var
+  pop1Y = random(300);
+    var pop2X = random(500);
+    var pop2Y = random(300);
+    var pop3X = random(500);
+    var pop3Y = random(300);
+
+    var aisu1X = random(500);
+    var aisu1X = random(300);
+    var aisu2X = random(500);
+    var aisu2X = random(300);
+    var aisu3X = random(500);
+    var aisu3X = random(300);
+ 
 }
 
 //🟡silly Functions - will run when called
-var drawFish = function(fishX, fishY, fishColor){
-  textSize(80);
-  fill(fishColor);
-  text("𓆝", fishX, fishY);
-};
 
 var drawKAITO = function(kaitoX, kaitoY){
 
-  fill(61, 78, 209);
-  ellipse(kaitoX, kaitoY - 16, 130, 120); //bg hair
+  fill(148, 198, 255);
+  rect(kaitoX - 50, kaitoY + 30, 20, 80); //scarf bg
 
   fill(255);
-  rect(kaitoX)
+  rect(kaitoX - 40, kaitoY + 20, 80, 100); //body
+
+  fill(61, 78, 209);
+  rect(kaitoX - 5, kaitoY + 30, 10, 90); //zipper
+  rect(kaitoX + 12, kaitoY + 70, 20, 5); //chest thing
+
+  fill(255, 232, 150);
+  triangle(kaitoX - 30, kaitoY + 100, kaitoX - 20, kaitoY + 110, kaitoX - 10, kaitoY + 100); //pockets
+  triangle(kaitoX + 30, kaitoY + 100, kaitoX + 20, kaitoY + 110, kaitoX + 10, kaitoY + 100);
+
+  fill(148, 198, 255);
+  rect(kaitoX - 45, kaitoY + 30, 90, 30); //scarf front
+
+  fill(61, 78, 209);
+  ellipse(kaitoX, kaitoY - 16, 130, 120); //bg hair
 
   fill(58, 62, 102);
   ellipse(kaitoX + 53, kaitoY + 7, 30, 50); //headphone
@@ -70,6 +108,14 @@ var drawKAITO = function(kaitoX, kaitoY){
   rect(kaitoX + 44, kaitoY - 30, 6, 10);
 }
 
+var drawPopsicle = function(popX, popY){
+  fill(255);
+  ellipse(popX, popY, 20, 20);
+}
+
+var drawAisu = function(popX, popY){
+  fill();
+}
 
 
 
