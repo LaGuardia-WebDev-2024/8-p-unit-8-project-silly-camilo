@@ -21,11 +21,16 @@ setup = function() {
     var treatColor1 = random(100, 200);
     var treatColor2 = random(100, 255);
     var treatColor3 = random(100, 200);
-    var treatColor4 = random(100, 255);
-    var treatColor5 = random(100, 200);
-    var treatColor6 = random(100, 255);
+    var treatColor4 = random(200, 255);
+    var treatColor5 = 200;
+    var treatColor6 = random(200, 255);
 
-    var treatVanishX = 255;
+    var treatVanish1 = 255;
+    var treatVanish2 = 255;
+    var treatVanish3 = 255;
+    var treatVanish4 = 255;
+    var treatVanish5 = 255;
+    var treatVanish6 = 255;
 
 //🟢draw Function - will run on repeat
 draw = function(){
@@ -35,26 +40,50 @@ draw = function(){
 
   drawKAITO(mouseX, mouseY);
 
-  fill(treatColor1, treatColor2, 255);
+  fill(treatColor1, treatColor2, 255, treatVanish1);
   drawPopsicle(pop1X, pop1Y);
-  fill(treatColor3, treatColor4, 255);
+  fill(treatColor3, treatColor4, 255, treatVanish2);
   drawPopsicle(pop2X, pop2Y);
-  fill(treatColor5, treatColor6, 255);
+  fill(treatColor5, treatColor6, 255, treatVanish3);
   drawPopsicle(pop3X, pop3Y);
 
-  fill(treatColor1, treatColor2, 255);
+  fill(treatColor1, treatColor2, 255, treatVanish4);
   drawAisu(aisu1X, aisu1Y);
-  fill(treatColor3, treatColor4, 255);
+  fill(treatColor3, treatColor4, 255, treatVanish5);
   drawAisu(aisu2X, aisu2Y);
-  fill(treatColor5, treatColor6, 255);
+  fill(treatColor5, treatColor6, 255, treatVanish6);
   drawAisu(aisu3X, aisu3Y);
-
-  if(mouseX = aisu1X){
-    if(mouseY = aisu1Y){
-      treatVanish -= 255;
-    }
-    
+  
+  let d1 = dist(pop1X, pop1Y, mouseX, mouseY);
+  if(d1 < 60){
+    treatVanish1 -= 200;
   }
+
+  let d2 = dist(pop2X, pop2Y, mouseX, mouseY);
+  if(d2 < 60){
+    treatVanish2 -= 200;
+  }
+
+  let d3 = dist(pop3X, pop3Y, mouseX, mouseY);
+  if(d3 < 60){
+    treatVanish3 -= 200;
+  }
+
+  let d4 = dist(aisu1X, aisu1Y, mouseX, mouseY);
+  if(d4 < 60){
+    treatVanish4 -= 200;
+  }
+
+  let d5 = dist(aisu2X, aisu2Y, mouseX, mouseY);
+  if(d5 < 60){
+    treatVanish5 -= 200;
+  }
+
+  let d6 = dist(aisu3X, aisu3Y, mouseX, mouseY);
+  if(d6 < 60){
+    treatVanish6 -= 200;
+  }
+
 };
 
 //🟢mouseClicked Function - will run when mouse is clicked
@@ -80,6 +109,13 @@ mouseClicked = function(){
    treatColor4 = random(100, 255);
    treatColor5 = random(100, 200);
    treatColor6 = random(100, 255);
+
+  treatVanish1 = 255;
+  treatVanish2 = 255;
+  treatVanish3 = 255;
+  treatVanish4 = 255;
+  treatVanish5 = 255;
+  treatVanish6 = 255;
 
  
 }
@@ -145,19 +181,14 @@ var drawKAITO = function(kaitoX, kaitoY){
 var drawPopsicle = function(popX, popY){
   ellipse(popX, popY, 40, 50);
   rect(popX - 20, popY + 4, 40, 20);
-  fill(97, 54, 49);
+  fill(230, 161, 154);
   rect(popX - 2.5, popY + 25, 5, 15);
-  fill(255);
-  ellipse(popX + 10, popY - 10, 10, 10);
 }
 
 var drawAisu = function(aisuX, aisuY){
   ellipse(aisuX, aisuY, 40, 40);
   fill(255, 207, 145);
-  triangle(aisuX - 20, aisuY + 20, aisuX, aisuY + 70, aisuX +20, aisuY +20);
-  fill(240, 255, 255);
-  ellipse(aisuX, aisuY + 20, 40, 40);
-  
+  triangle(aisuX - 20, aisuY + 10, aisuX, aisuY + 70, aisuX +20, aisuY +10);
 }
 
 
