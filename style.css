@@ -8,11 +8,11 @@ body {
   text-align: center;
   color: rgb(90, 90, 215);
   margin: auto;
-  font-family: water;
+  font-family: Pixelify Sans;
 }
 
 h1{
-  font-size: 30px;
+  font-size: 60px;
 }
 
 #myCanvas {
