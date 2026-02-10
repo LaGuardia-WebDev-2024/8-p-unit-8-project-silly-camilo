@@ -4,19 +4,19 @@ setup = function() {
     background(255,255,255,0);
 };
 
-    var pop1X = random(500);
-    var pop1Y = random(300);
-    var pop2X = random(500);
-    var pop2Y = random(300);
-    var pop3X = random(500);
-    var pop3Y = random(300);
+    var pop1X = random(400);
+    var pop1Y = random(200);
+    var pop2X = random(400);
+    var pop2Y = random(200);
+    var pop3X = random(400);
+    var pop3Y = random(200);
 
-    var aisu1X = random(500);
-    var aisu1Y = random(300);
-    var aisu2X = random(500);
-    var aisu2Y = random(300);
-    var aisu3X = random(500);
-    var aisu3Y = random(300);
+    var aisu1X = random(400);
+    var aisu1Y = random(200);
+    var aisu2X = random(400);
+    var aisu2Y = random(200);
+    var aisu3X = random(400);
+    var aisu3Y = random(200);
 
     var treatColor1 = random(100, 200);
     var treatColor2 = random(100, 255);
